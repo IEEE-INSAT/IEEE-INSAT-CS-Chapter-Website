@@ -1,0 +1,135 @@
+
+#team {
+    padding: 60px 0;
+}
+
+.team--bg{
+    background-color: #FCFCFC;
+}
+
+.team__title-style{
+    margin-bottom: 30px;
+}
+
+.team__title-style .first-line{
+    display: inline-block;
+    border-top: 3px solid #1680F8;
+    border-bottom: 3px solid #1680F8;
+    padding: 0px 50px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.team__title-style .first-line:after{
+    content: "";
+    width: 7px;
+    height: 7px;
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    right: -17px;
+    top:-4px;
+    background-color: #1680F8;
+}
+
+.team__title-style .second-line{
+    display: inline-block;
+    border-top: 3px solid #1680F8;
+    border-bottom: 3px solid #1680F8;
+    padding: 0px 18px;
+    border-radius: 5px;
+    position: relative;
+    margin-left: 38px;
+}
+
+.team__title-style .second-line:before{
+    content: "";
+    width: 7px;
+    height: 7px;
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    left: -15px;
+    top: -4px;
+    background-color: #1680F8;
+}
+
+.team__single{
+    border-radius: 10px;
+    border:0;
+    -webkit-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
+    padding: 30px 25px;
+}
+
+@media (max-width: 991px){
+
+    .team__single{
+        margin-bottom: 50px
+    }
+}
+
+.team__single .bio img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.team__single .bio h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #ff6535;
+}
+
+.team__single .bio p{
+    font-size: 16px;
+    color: #29588c;
+}
+
+.team__single .caption p{
+    font-size: 16px;
+    color: black;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-family: Roboto , SansSerif;
+    text-align: justify;
+}
+
+.team__single .caption .social-icons li{
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.team__single .caption .social-icons li a{
+    display: block;
+}
+
+
+.team__single .caption .social-icons li [class^="flaticon-"]:before, .team__single .caption .social-icons li [class*=" flaticon-"]:before{
+    margin: 0;
+    width: 22px;
+    height: 22px;
+    display: block;
+    border-radius: 50%;
+    font-size: 12px;
+    padding-top: 2px;
+    text-align: center;
+    background-color: #29588c;
+    color: white;
+}
+
+.member-card {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.team-section-description {
+    color: #29588c;
+    font-size: 20px;
+}
+
+.role-name {
+    color: #29588c !important;
+}

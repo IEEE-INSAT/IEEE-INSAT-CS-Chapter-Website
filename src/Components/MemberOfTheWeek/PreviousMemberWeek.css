@@ -1,0 +1,18 @@
+.prevCard{
+    max-width: 70%;
+    background: transparent
+}
+@media (max-width: 1000px) {
+    .prevCard{max-width: 97%}
+
+}
+.card-img {
+    width: 100%;
+    height: 100% !important;
+}
+.card p {
+    font-family: Roboto,SansSerif;
+}
+.card-text{
+    text-align: justify;
+}

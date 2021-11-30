@@ -1,0 +1,436 @@
+/*
+** COPYRIGHT RAED OUERFELLI
+ */
+
+
+/*
+* * *
+
+    1/ NAVBAR {gone to index.css}
+    2/HEADER
+    3/ABOUT
+    4/Team
+-----
+ */
+
+
+
+
+/*
+*************************/
+/*    2 / HEADER       */
+/*************************
+*/
+
+.page-header{
+    box-sizing: border-box;
+    padding-top: 150px ;
+    font-family: 'Rubik', sans-serif;
+    color: #ffffff!important;
+}
+
+.title-brand{
+    margin-top:75px;
+    margin-bottom: 100px;
+}
+
+.presentation-title{
+    margin: 10px 0;
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    -webkit-animation-delay: .6s;
+    animation-delay: .6s;
+}
+
+
+/*
+*************************/
+/*    3 / About section       */
+/*************************
+*/
+
+.hero{
+    padding-top: 5%;
+    font-family: 'Rubik', sans-serif;
+    background-size: cover;
+
+    margin-bottom: 5%;
+}
+
+.text-center p{
+    color: #f6f3ee;
+    font-family: 'Oswald',SansSerif;
+}
+
+.hero .extra-title {
+    margin-bottom: 30px;
+    color: #999;
+}
+.hero .extra-title span {
+    color: #faa41a;
+}
+.hero .feat-item {
+    padding: 0;
+    margin-top: 5%;
+}
+.hero .feat-item .text-center {
+    padding: 50px 30px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.04);
+}
+.hero .feat-item.active .text-center {
+    margin-top: -25px;
+    padding-top: 75px;
+    -webkit-box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 3;
+}
+.hero .feat-item:hover .icon {
+    color: #fff;
+}
+.hero .feat-item:hover .icon:after {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+.hero .feat-item .icon {
+    width: 90px;
+    height: 90px;
+    line-height: 105px;
+    color: #777;
+    font-size: 60px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 3;
+}
+.hero .feat-item .icon:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #5c5c5c;
+    background: -webkit-gradient(linear, left top, right bottom, from(#dcdcdc), to(#5c5c5c));
+    background: linear-gradient(to bottom right, #dcdcdc, #5c5c5c);
+    border-radius: 50%;
+    z-index: -1;
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+.hero .feat-item h5 {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: black;
+    margin-top: 30px;
+}
+.hero .feat-item h6 {
+    color: #1A237E;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+
+
+
+/*
+*************************/
+/*    4 / Team section       */
+/*************************
+*/
+
+.team {
+    height: 1700px;
+}
+
+@media (max-width: 991px) {
+
+    .team {
+        height: 2100px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .team {
+        height: 3400px;
+    }
+}
+
+
+.team-header h3{
+    font-size: 50px;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    animation-delay: .6s;
+    color: rgba(255,255,255,.8);
+    font-family: 'Rubik', sans-serif;
+}
+.team-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 150px;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 10%;
+}
+
+.team .item:hover .team-img:after {
+    opacity: .8;
+}
+.team .item:hover .social {
+    bottom: 30%;
+}
+.team .item .team-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    height: 83%;
+}
+
+@media (max-width: 777px) {
+    .team .item .team-img {
+        height: 97%;
+    }
+}
+
+.team .item .team-img:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2576FD;
+    background: -webkit-gradient(linear, left top, left bottom, from(#dcdcdc), to(#5c5c5c));
+    background: linear-gradient(to bottom, #dcdcdc, #5c5c5c);
+    opacity: 0;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+.team .item .social {
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+    width: 100%;
+    padding: 30px 15px;
+    text-align: center;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    z-index: 3;
+}
+.team .item .social a {
+    color: #fff;
+    margin: 0 15px;
+}
+
+.team .item .btn-round:hover{
+    background-color: #faa41a;
+    color: #5c5c5c;
+}
+.team .item .btn-round{
+   color: #fff;
+    border-color: #faa41a;
+}
+
+.team .item .info {
+    text-align: center;
+    margin-top: 20px;
+}
+.team .item .info h6 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.team .item .info span {
+    color: #777;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.team-row{
+    height: 389px;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+}
+
+@media (max-width: 1199px) {
+    .team-row{
+        height: 325px;
+    }
+}
+
+
+.team-col{
+    height: 100%!important;
+    margin-bottom: 50px;
+}
+
+.item{
+    height: 100%;
+    padding: 15%;
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .item {
+        margin: 0 17%!important;
+    }
+
+    .team-col{
+        margin-bottom: 0px;
+    }
+}
+
+
+/* The Modal (background) */
+.modalReact {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1003; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-text {
+    background-color: #fefefe;
+    margin: 8% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    overflow: auto;
+    width: 50%; /* Could be more or less, depending on screen size */
+    height: 60%;
+    font-family: 'Rubik', sans-serif;
+}
+
+.modal-body{
+    padding-top: 50px;
+    text-align: justify;
+    font-size: 15px;
+    font-weight: 300;
+    color: #5c5c5c;
+}
+/* The Close Button */
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*
+*************************/
+/*    5 / Footer       */
+/*************************
+*/
+
+
+/*
+footer {
+    padding: 80px 0;
+    background: #5c5c5c;
+    background-image: url("../img/bgGray.webp");
+    background-size: cover;
+}
+footer .social a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #faa41a;
+    font-size: 16px;
+    margin: 15px 5px;
+}
+footer .social a:hover {
+    color: #fff;
+}
+footer p {
+    color: #fff;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+*/
+
+
+.landing-section {
+    padding: 100px 0;
+    z-index: 1;
+    color: #66615b;
+    font-family: Raleway, sans-serif;
+}
+
+.section-buttons {
+    z-index: 1; }
+
+.landing-section .btn-simple {
+    padding: 0; }
+
+.landing-section .column {
+    padding: 0 75px 0 25px; }
+
+
+.contact-form {
+    margin-top: 30px; }
+
+.contact-form label {
+    margin-top: 15px; }
+
+.contact-form .btn {
+    margin-top: 30px;
+}
+.text-center {
+    text-align: center!important;
+}
+
+.text-center {
+    text-align: center!important;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.status{
+    margin-top: 50px;
+}
+
+
+.btn-fill{
+    background-color: #faa41a;
+    border-color: #faa41a;
+}
+
+
+/*
+*************************/
+/*    5 / Footer       */
+/*************************
+*/
+
+/* See footer.css in the footer Component */

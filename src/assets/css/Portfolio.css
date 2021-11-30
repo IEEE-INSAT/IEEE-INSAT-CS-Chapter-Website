@@ -1,0 +1,53 @@
+.page-header{
+    box-sizing: border-box;
+    padding-top: 150px ;
+    font-family: 'Rubik', sans-serif;
+    color: #ffffff;
+}
+
+.title-brand{
+    margin-bottom: 100px;
+}
+
+.presentation-title{
+    margin: 10px 0;
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    -webkit-animation-delay: .6s;
+    animation-delay: .6s;
+}
+
+
+
+/*
+*************************/
+/*    2 / main      */
+/*************************
+*/
+
+.portfolio-main{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-ec:hover{
+    background-color: #dcdcdc;
+}
+
+.page-carousel{
+    height: 100%;
+}
+
+.carousel{
+    height: 100%;
+}
+
+.item-carousel{
+    width: 100%;
+    display: flex;
+}

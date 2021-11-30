@@ -1,0 +1,48 @@
+.our-title {
+    color: #ff6535;
+}
+.activities-title {
+    color: #29588c;
+}
+
+
+#activities {
+    background: url("../../assets/img/bg.webp") center top no-repeat fixed;
+    background-size: cover;
+    padding: 60px 0 60px 0;
+    position: relative;
+}
+
+#activities header {
+    padding:30px;
+}
+
+#activities::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.88);
+    z-index: 9;
+}
+#activities .container {
+    position: relative;
+    z-index: 10;
+}
+
+#activities .counters span {
+    font-weight: bold;
+    font-size: 48px;
+    display: block;
+    color: #ff6535;
+}
+#activities .container {
+    margin-top: -300px;
+}
+@media (max-width: 1200px) {
+    .carousel_item img{
+        height: 690px;
+    }
+}

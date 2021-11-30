@@ -1,0 +1,25 @@
+{
+  "news": [
+    {
+      "id": 3,
+      "title": "The CSTC form is READY!",
+      "date": "Mars 2021",
+      "description": "Computer Society Tech Congress is a 3-day event that highlights the newest technologies. It holds workshops and conferences about various computer science domains such as Web Development, Artificial Intelligence, Virtual Reality, and others.  \nMoreover, it is a unique opportunity to forge and improve soft skills since it is another focal point of our congress. Join us on this surely outstanding experience, and we guarantee that you will never be the same after it.\nHurry up and fill this form!",
+      "imagesUrl": ["CSTC/grandTech.webp"],
+      "fbLink": "https://www.facebook.com/CSTcongress",
+      "igLink": "https://www.instagram.com/cst_congress/?igshid=4cf09lmbr9zm&fbclid=IwAR0CIilo_xd2OiEytPpF9kDCvpxM7zi0FGoeAhXVooYOTfeIfysquYqmBjg",
+      "moreLink" : "https://docs.google.com/forms/d/e/1FAIpQLSckCRsIQrNSkdHo7LlEvOMz_uuCxrkneRRo_ND_aGOB0XvgCA/viewform?fbclid=IwAR2jIou3uK3K-DUNKyLmt0D1lO1Y65BS6jpMArxjZBL8TpYH10I9MN1mNKw&pli=1"
+
+    },{
+      "id": 3,
+      "title": "TRACE-IT Project",
+      "date": "Mars 2021",
+      "description": "We are back with another project, another idea, and another inspiration!\nIts main idea is The traceability of organic and ecological products via Blockchain technologies. Our purpose is to ensure transparency between the client and the provider of any product. By scanning the product, the client can recognize its origin, the process leading to its creation, and the location of the steps ensuring its validity. This will not only facilitate the communication process between enterprises and clients but it will also help track the progress of any product creation through modern technologies.\nGot inquisitive? want to know more about this project and be a part of it? \n",
+      "imagesUrl": ["trace-it axis.webp"],
+      "fbLink": "https://www.facebook.com/watch/?v=674990973221145",
+      "igLink": "https://www.instagram.com/ieee_cschapterinsatsb/",
+      "moreLink" : "https://forms.gle/rGo2f1uSmn99BohcA"
+
+    }
+  ]
+}

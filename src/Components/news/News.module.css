@@ -1,0 +1,48 @@
+.ourTitle {
+    color: #ff6535;
+}
+.newsTitle {
+    color: #29588c;
+}
+
+
+.news {
+    background: url("../../assets/img/bg.webp") center top no-repeat fixed;
+    background-size: cover;
+    padding: 60px 0 60px 0;
+    position: relative;
+}
+
+.news header {
+    padding:30px;
+}
+
+.news::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.88);
+    z-index: 9;
+}
+.news .container {
+    position: relative;
+    z-index: 10;
+    padding: 0 80px;
+    margin-top: -300px;
+}
+@media (max-width: 800px) {
+    .news .container{
+        padding: 0 20px;
+    }
+
+}
+
+.news .counters span {
+    font-weight: bold;
+    font-size: 48px;
+    display: block;
+    color: #faa41a;
+}
