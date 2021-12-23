@@ -27,7 +27,7 @@ function Timeline() {
           var pos = $(this).scrollTop();
           selectors.item.each(function (i) {
             min = $(this).offset().top - 200;
-            max = $(this).height() - min;
+            max = $(this).height() + min;
             if (i === itemLength - 1 && pos > min + $(this).height() / 2) {
               selectors.item.removeClass(selectors.activeClass);
               selectors.id.css(

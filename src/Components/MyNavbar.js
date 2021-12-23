@@ -16,130 +16,143 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React, {useEffect, useState} from "react";
-import classnames from "classnames"
-import myLogo from "../assets/img/logoSmall.png"
-import logoW from "../assets/img/logoWhite.png"
-import {Link} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import classnames from "classnames";
+import myLogo from "../assets/img/logoSmall.png";
+import logoW from "../assets/img/logoWhite.png";
+import { Link } from "react-router-dom";
 import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-} from 'reactstrap';
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+} from "reactstrap";
 import Container from "reactstrap/es/Container";
 
 function MyNavbar(props) {
-    const [isOpen , setIsOpen] = useState(false);
-    const [navbarColor , setNavbarColor] = useState("navbar-transparent");
-    const [logoWidth , setLogoWidth] = useState("40px");
-    const [logo , setLogo] = useState(myLogo);
-    const iconStyle = {
-        marginRight:'5px',
-        marginBottom:'5px',
-        color:'white'
-    }
+  const [isOpen, setIsOpen] = useState(false);
+  const [navbarColor, setNavbarColor] = useState("navbar-transparent");
+  const [logoWidth, setLogoWidth] = useState("40px");
+  const [logo, setLogo] = useState(myLogo);
+  const iconStyle = {
+    marginRight: "5px",
+    marginBottom: "5px",
+    color: "white",
+  };
 
-    const updateNavbarColor =() => {
-        if(window.innerWidth > 768) {
-            if (
-                document.documentElement.scrollTop > 59 ||
-                document.body.scrollTop > 59
-            ) {
-                setNavbarColor("");
-                setLogoWidth("30px");
-                setLogo(logoW);
-            } else if (
-                document.documentElement.scrollTop < 60 ||
-                document.body.scrollTop < 60
-            ) {
-                setNavbarColor("navbar-transparent");
-                setLogoWidth("40px");
-                setLogo(myLogo);
-            }
-        }else{
-            setNavbarColor("");
-            setLogoWidth("30px");
-            setLogo(logoW);
-        }
-    }
-
-    useEffect(() => {
-        if (!props.fixed) {
-            setIsOpen(false);
-            setNavbarColor("navbar-transparent");
-            setLogoWidth("40px");
-            setLogo(myLogo);
-        }else{
-            setIsOpen(false);
-            setNavbarColor("");
-            setLogoWidth("30px");
-            setLogo(logoW);
-        }
-        updateNavbarColor();
-        if (!props.fixed)
-            window.addEventListener("scroll", updateNavbarColor);
-
-        return () => window.removeEventListener("scroll", updateNavbarColor);
-
-    } , [props , window.innerWidth]);
-
-    const toggle=()=> {
+  const updateNavbarColor = () => {
+    if (window.innerWidth > 768) {
+      if (
+        document.documentElement.scrollTop > 59 ||
+        document.body.scrollTop > 59
+      ) {
         setNavbarColor("");
-        setIsOpen(!isOpen);
+        setLogoWidth("30px");
+        setLogo(logoW);
+      } else if (
+        document.documentElement.scrollTop < 60 ||
+        document.body.scrollTop < 60
+      ) {
+        setNavbarColor("navbar-transparent");
+        setLogoWidth("40px");
+        setLogo(myLogo);
+      }
+    } else {
+      setNavbarColor("");
+      setLogoWidth("30px");
+      setLogo(logoW);
     }
-    return(
-        <div>
-            <Navbar className={classnames("", navbarColor)} light expand="md">
-                <Container>
-                    <NavbarBrand href="/" onClick={()=>{window.scrollTo(0,0)}}><img src={logo} alt="logo"
-                                                                                    width={logoWidth}/></NavbarBrand>
-                    <NavbarToggler onClick={toggle}/>
-                    <Collapse isOpen={isOpen} navbar>
-                        <Nav className="ml-auto" navbar>
-                            <NavItem className="nav-link nav-item" >
-                                <Link to="/" onClick={()=>{window.scrollTo(0,0)}}>
-                                    <i className="fas fa-home" style={iconStyle}/>
-                                    <span> Home</span>
-                                </Link>
-                            </NavItem>
-                            <NavItem className="nav-link nav-item">
-                                <Link to="/member-of-the-month">
-                                    <i className="fas fa-star" style={iconStyle}/>
-                                    <span>Member of the Month</span>
-                                </Link>
-                            </NavItem>
-                            <NavItem className="nav-link nav-item">
-                                <Link to={"/news"}>
-                                    <i className="fas fa-newspaper" style={iconStyle}/>
-                                    <span>News</span>
-                                </Link>
-                            </NavItem>
-                            <NavItem className="nav-link nav-item">
-                                <Link to={"/activities"}>
-                                    <i className="fas fa-file-alt" style={iconStyle}/>
-                                    Activities
-                                </Link>
-                            </NavItem >
-                            <NavItem className="nav-link nav-item">
-                                <Link to={"/eventstimeline"}>
-                                    <i className="fas fa-calendar-alt" style={iconStyle}/>
-                                    Events Timeline
-                                </Link>
-                            </NavItem>
-                            {/*<NavItem>*/}
-                            {/*    <NavLink><Link to={"/CSTC"}>CSTC </Link></NavLink>*/}
-                            {/*</NavItem>*/}
+  };
 
-                        </Nav>
-                    </Collapse>
-                </Container>
-            </Navbar>
-        </div>
-    );
+  useEffect(() => {
+    if (!props.fixed) {
+      setIsOpen(false);
+      setNavbarColor("navbar-transparent");
+      setLogoWidth("40px");
+      setLogo(myLogo);
+    } else {
+      setIsOpen(false);
+      setNavbarColor("");
+      setLogoWidth("30px");
+      setLogo(logoW);
+    }
+    updateNavbarColor();
+    if (!props.fixed) window.addEventListener("scroll", updateNavbarColor);
+
+    return () => window.removeEventListener("scroll", updateNavbarColor);
+  }, [props, window.innerWidth]);
+
+  const toggle = () => {
+    setNavbarColor("");
+    setIsOpen(!isOpen);
+  };
+  return (
+    <div>
+      <Navbar className={classnames("", navbarColor)} light expand="md">
+        <Container>
+          <NavbarBrand
+            href="/"
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          >
+            <img
+              src={logo}
+              alt="logo"
+              width={logoWidth}
+              style={{ transition: "300ms" }}
+            />
+          </NavbarBrand>
+          <NavbarToggler onClick={toggle} />
+          <Collapse isOpen={isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem className="nav-link nav-item">
+                <Link
+                  to="/"
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
+                >
+                  <i className="fas fa-home" style={iconStyle} />
+                  <span> Home</span>
+                </Link>
+              </NavItem>
+              <NavItem className="nav-link nav-item">
+                <Link to="/member-of-the-month">
+                  <i className="fas fa-star" style={iconStyle} />
+                  <span>Member of the Month</span>
+                </Link>
+              </NavItem>
+              <NavItem className="nav-link nav-item">
+                <Link to={"/news"}>
+                  <i className="fas fa-newspaper" style={iconStyle} />
+                  <span>News</span>
+                </Link>
+              </NavItem>
+              <NavItem className="nav-link nav-item">
+                <Link to={"/activities"}>
+                  <i className="fas fa-file-alt" style={iconStyle} />
+                  Activities
+                </Link>
+              </NavItem>
+              <NavItem className="nav-link nav-item">
+                <Link to={"/eventstimeline"}>
+                  <i className="fas fa-calendar-alt" style={iconStyle} />
+                  Events Timeline
+                </Link>
+              </NavItem>
+              {/*<NavItem>*/}
+              {/*    <NavLink><Link to={"/CSTC"}>CSTC </Link></NavLink>*/}
+              {/*</NavItem>*/}
+            </Nav>
+          </Collapse>
+        </Container>
+      </Navbar>
+    </div>
+  );
 }
 export default MyNavbar;
 
