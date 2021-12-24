@@ -22,7 +22,7 @@ jobs:
       - name: 🔨 Build Project
         run: |
           npm install
-          DISABLE_ESLINT_PLUGIN=true npm run build
+          npm run build
           
       - name: 📂 Deploy in ftp server
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
