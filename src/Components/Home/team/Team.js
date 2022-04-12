@@ -73,7 +73,7 @@ export default class Team extends Component {
         name: "Mohamed Sahnoun",
         role: "Webmaster",
         img: "sahnoun.jpg",
-        desc: `Ahmed is a talented and cooperative software engineering student with a great passion for web development, data science and Artificial Intelligence
+        desc: `Mohamed is a talented and cooperative software engineering student with a great passion for web development, data science and Artificial Intelligence
                    . He’s a hard worker, an effective teacher, a technical expert, and a skilled developer.`,
         linkedinLink: "https://www.linkedin.com/in/mohamed-sahnoun-1a33b71a0/",
         facebookLink: "https://www.facebook.com/mohamed.sahnoun.545",

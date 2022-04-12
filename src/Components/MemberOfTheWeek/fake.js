@@ -1,0 +1,48 @@
+export const events = [
+  {
+    id: "1",
+    title: "IEEEXtreme 15.0",
+    place: "INSAT",
+    date: "22/23 Octobre 2021",
+    description:
+      "IEEEXtreme 15.0 INSAT edition took place in INSAT with our theme being the Olympics. Our opening ceremony started with a word from the committee and was enclosed by a performance from a local band. Afterwards, the participants went to the competition space, had dinner and the 24h contest began.All along the journey they played games, ate a lot, watched a movie and slept too. In the feedback form, we found highly satisfied participants and that was our goal.\n",
+    details: "IEEEXREEM HACKATHON",
+    images: [
+      "Member_of_the_week/members/membersOfTheEvents/Extreem/header.jpg",
+      "Member_of_the_week/members/membersOfTheEvents/Extreem/ahmed.jpg",
+      "Member_of_the_week/members/membersOfTheEvents/Extreem/hadil.jpg",
+      "Member_of_the_week/members/membersOfTheEvents/Extreem/adam.jpg",
+      "Member_of_the_week/members/membersOfTheEvents/Extreem/hela.jpg",
+      "Member_of_the_week/members/membersOfTheEvents/Extreem/malek.jpg",
+      "Member_of_the_week/members/membersOfTheEvents/Extreem/omar.jpg",
+      "Member_of_the_week/members/membersOfTheEvents/Extreem/sara.jpg",
+      "Member_of_the_week/members/membersOfTheEvents/Extreem/yasmine.jpg",
+      "Member_of_the_week/members/membersOfTheEvents/Extreem/zeineb.jpg",
+    ],
+    facebookUrl: "https://www.facebook.com/IeeeInsatStudentBranch",
+    instagramUrl: "https://www.instagram.com/ieee.insat.sb/",
+  },
+  {
+    id: "2",
+    title: "Hour of Code",
+    place: "INSAT",
+    date: "22/23 Octobre 2021",
+    description:
+      "Hour of code is an event where we introduce children to the universe of computers and programming\n",
+    details: "The Hour of Code",
+    images: [
+      "Member_of_the_week/members/membersOfTheEvents/hoc/arij.jpg",
+      "Member_of_the_week/members/membersOfTheEvents/hoc/eya.jpg",
+      "Member_of_the_week/members/membersOfTheEvents/hoc/fedi.jpg",
+      "Member_of_the_week/members/membersOfTheEvents/hoc/ines.jpg",
+      "Member_of_the_week/members/membersOfTheEvents/hoc/maissen.jpg",
+      "Member_of_the_week/members/membersOfTheEvents/hoc/oumaima.jpg",
+      "Member_of_the_week/members/membersOfTheEvents/hoc/oumaima2.jpg",
+      "Member_of_the_week/members/membersOfTheEvents/hoc/ranya.jpg",
+      "Member_of_the_week/members/membersOfTheEvents/hoc/rym.jpg",
+      "Member_of_the_week/members/membersOfTheEvents/hoc/yassine.jpg",
+    ],
+    facebookUrl: "https://www.facebook.com/IeeeInsatStudentBranch",
+    instagramUrl: "https://www.instagram.com/ieee.insat.sb/",
+  },
+];

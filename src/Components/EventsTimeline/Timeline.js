@@ -60,7 +60,7 @@ function Timeline() {
       id: 6,
       name: "SummerSchool",
       date: "2-4/10/2020",
-      image: "summerSchool.webp",
+      image: "summerSchool.jpg",
       description: `Summer school, organized by the IEEE INSAT Student Branch, is a way to turn students' summer 
             into a productive one.
             We, as the Computer Society Chapter, try to offer the students through this event multiple pieces of training 
@@ -71,7 +71,7 @@ function Timeline() {
       id: 5,
       name: "IEEEXtreme",
       date: "24/10/2020",
-      image: "xtreem.webp",
+      image: "xtreem.jpg",
       description: `IEEEXtreme is an annual hackathon and competitive programming challenge in which teams of IEEE Student members compete in a 24-hour time span against each other to solve a set of programming problems. The competition is underwritten and coordinated by IEEE's Membership and Geographic Activities department and is often supported by partnering sponsors.
 participants are demanded to solve a variety of real-world problems on the 24th of October from 00:00 UTC until 23:59 UTC.
 It is a unique experience and an opportunity to rediscover programming from a new angle, to learn, and acquire new problem-solving skills, and to compete with other IEEE students during a fun event!`,

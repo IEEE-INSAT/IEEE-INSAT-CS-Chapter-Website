@@ -85,6 +85,8 @@ function Activity(props) {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
+  let base = "../../assets/img/activity/activities/";
+
   let {
     id,
     title,
@@ -95,7 +97,11 @@ function Activity(props) {
     images,
     facebookUrl,
     instagramUrl,
+    baseURL,
   } = props;
+  if (baseURL) {
+    base = baseURL;
+  }
   facebookUrl = facebookUrl ? facebookUrl : "https://www.facebook.com/";
   instagramUrl = instagramUrl ? instagramUrl : "https://www.instagram.com/";
   return (
@@ -141,11 +147,11 @@ function Activity(props) {
                           <img
                             className="d-block w-100"
                             style={{
-                              objectFit: "cover",
+                              objectFit: "scale-down",
                               width: "70vw",
                               height: "70vh",
                             }}
-                            src={require(`../../assets/img/activity/activities/${item}`)}
+                            src={require("../../assets/img/" + item)}
                             alt="description image"
                           />
                         </div>
@@ -154,8 +160,13 @@ function Activity(props) {
                     return (
                       <div key={`image${index}`} className="carousel-item">
                         <img
-                          className="d-block "
-                          src={require(`../../assets/img/activity/activities/${item}`)}
+                          className="d-block  w-100"
+                          style={{
+                            objectFit: "scale-down",
+                            width: "70vw",
+                            height: "70vh",
+                          }}
+                          src={require("../../assets/img/" + item)}
                           alt="description image"
                         />
                       </div>
