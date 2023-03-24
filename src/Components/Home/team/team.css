@@ -65,6 +65,11 @@
   .team__single {
     margin-bottom: 50px;
   }
+  .team__single .caption{
+    width: 50%; /* set the width of the div */
+  margin: 0 44%;
+    
+  }
 }
 
 .team__single .bio img {
@@ -93,6 +98,10 @@
   margin-bottom: 25px;
   font-family: Roboto, SansSerif;
   text-align: justify;
+}
+.team__single .caption{
+  width: 50%; /* set the width of the div */
+  margin: 0 40%;
 }
 
 .team__single .caption .social-icons li {

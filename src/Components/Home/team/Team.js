@@ -27,87 +27,58 @@ export default class Team extends Component {
     const modals = [
       {
         id: 1,
-        name: "Asma Jebari",
-        role: "ChairWoman",
-        img: "asma.jpg",
-        desc: `Asma is a IT computer systems & networks engineering student with a great passion for computer science. She thrives on
-                 challenges and constantly sets goals for herself. She’s a natural leader who’s always looking for an 
-                 opportunity to achieve greatness and bring out the best in people.`,
-        linkedinLink: "https://www.linkedin.com/in/asmajebari/",
-        facebookLink: "https://www.facebook.com/asma.jebari4",
+        name: "Hani Haddad",
+        role: "ChairMan",
+        img: "hani.jpg",
+        // desc: `Asma is a IT computer systems & networks engineering student with a great passion for computer science. She thrives on
+        //          challenges and constantly sets goals for herself. She’s a natural leader who’s always looking for an 
+        //          opportunity to achieve greatness and bring out the best in people.`,
+        linkedinLink: "https://www.linkedin.com/in/hani-haddad1/",
+        facebookLink: "https://www.facebook.com/julio.hannouna.bogoss/",
       },
       {
         id: 8,
-        name: "Anissa Ben Hamza",
-        role: "Human Resources Manager",
-        img: "anissa.jpg",
-        desc: `Anissa is a talented and energetic IT computer systems & networks engineering student. She’s a people-person who loves
-                  meeting new people and learning about their lives and their backgrounds. She’s an excellent communicator
-                   who will make you feel comfortable and welcomed.`,
-        linkedinLink: "https://www.linkedin.com/in/anissa-ben-hamza-7627621bb/",
-        facebookLink: "https://www.facebook.com/profile.php?id=100009580279029",
+        name: "Eya Ridene",
+        role: "Vice chair membership",
+        img: "eyar.jpg",
+        // desc: `Anissa is a talented and energetic IT computer systems & networks engineering student. She’s a people-person who loves
+        //           meeting new people and learning about their lives and their backgrounds. She’s an excellent communicator
+        //            who will make you feel comfortable and welcomed.`,
+        linkedinLink: "https://www.linkedin.com/in/eya-ridene-b73b86232/",
+        facebookLink: "https://www.facebook.com/eya.riden.1",
       },
       {
         id: 7,
-        name: "Salma Borchani",
-        role: "Vice Chair Woman",
-        img: "salma.jpg",
-        desc: `Salma is a Software engineering student, passionate about web
-                   development, this is why she spends a lot of her time learning in online classes so that she can amplify her
-                    skills. She is so sweet and fun.`,
-        linkedinLink: "https://www.linkedin.com/in/salma-borcheni/",
-        facebookLink: "https://www.facebook.com/salma.borchani.5",
+        name: "Naim Dali ",
+        role: "Vice Chair technical",
+        img: "naim.jpg",
+        // desc: `Salma is a Software engineering student, passionate about web
+        //            development, this is why she spends a lot of her time learning in online classes so that she can amplify her
+        //             skills. She is so sweet and fun.`,
+        linkedinLink: "https://www.linkedin.com/in/naim-dali-b1ab831a8/",
+        facebookLink: "https://www.facebook.com/naim.dali.54",
       },
       {
         id: 3,
-        name: "Issam Jebnouni",
+        name: "Eya Teyeb",
         role: "General Secretary",
-        img: "issam.jpg",
-        desc: `Issam is an ambitious IT computer systems & networks student passionate about a lot of things. His determination and time-management made him the best fit for being the general secretary
-                    of this year.`,
-        linkedinLink: "https://www.linkedin.com/in/issam-jebnouni-345211206/",
-        facebookLink: "https://www.facebook.com/issam.jebnouni",
+        img: "eyat.jpg",
+        // desc: `Issam is an ambitious IT computer systems & networks student passionate about a lot of things. His determination and time-management made him the best fit for being the general secretary
+        //             of this year.`,
+        linkedinLink: "https://www.linkedin.com/in/eya-teyeb-0408371b7/",
+        facebookLink: "https://www.facebook.com/eyateyeb7",
       },
-      {
-        id: 4,
-        name: "Mohamed Sahnoun",
-        role: "Webmaster",
-        img: "sahnoun.jpg",
-        desc: `Ahmed is a talented and cooperative software engineering student with a great passion for web development, data science and Artificial Intelligence
-                   . He’s a hard worker, an effective teacher, a technical expert, and a skilled developer.`,
-        linkedinLink: "https://www.linkedin.com/in/mohamed-sahnoun-1a33b71a0/",
-        facebookLink: "https://www.facebook.com/mohamed.sahnoun.545",
-      },
-      {
-        id: 5,
-        name: "Mahdi Chaari",
-        role: "Training Manager",
-        img: "mahdi.jpg",
-        desc: `Mahdi is a Software Engineering student. He is a hard worker driven by passion and a desire to change things. He is a source of creativity and energy to the group`,
-        linkedinLink: "https://www.linkedin.com/in/mahdi-chaari-5195421b9/",
-        facebookLink: "www.facebook.com/mahdi.chaari.75",
-      },
-      {
-        id: 6,
-        name: "Khaldoun Taktak",
-        role: "Sponsoring Manager",
-        img: "khaldoun.jpg",
-        desc: `Khaldoun is an energetic and resourceful IT and Networking student who knows exactly how to deal
-                  with money! He is constantly checking in to determine how close or how far away we are
-                   and what it will take to make it happen.`,
-        linkedinLink: "https://www.linkedin.com/in/khaldoun-taktak-48b15922/",
-        facebookLink: "https://www.facebook.com/Khaldountaktak0",
-      },
+     
       {
         id: 2,
-        name: "Rasslen Ansi",
+        name: "Sofiene azzabi",
         role: "Media Manager",
-        img: "rasslen.jpg",
-        desc: `Rasslen is a skillful and artsy Software engineering student with large knowledge
-                   and understanding of the field of computer science. He’s a funny spirit and a creative mind who always
-                    seeks originality and perfection.`,
+        img: "hani.jpg",
+        // desc: `Rasslen is a skillful and artsy Software engineering student with large knowledge
+        //            and understanding of the field of computer science. He’s a funny spirit and a creative mind who always
+        //             seeks originality and perfection.`,
         linkedinLink: "#",
-        facebookLink: "https://www.facebook.com/raslen.ansi",
+        facebookLink: "https://www.facebook.com/sofienne.azzabi",
       },
     ];
 
@@ -141,7 +112,7 @@ export default class Team extends Component {
                       <p className="role-name">{modal.role}</p>
                     </div>
                     <div className="caption">
-                      <p>{modal.desc}</p>
+                      {/* <p>{modal.desc}</p> */}
                       <div className="social-icons">
                         <ul>
                           <li>
