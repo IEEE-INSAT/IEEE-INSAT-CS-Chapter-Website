@@ -73,7 +73,7 @@ export default class Team extends Component {
         id: 2,
         name: "Sofiene azzabi",
         role: "Media Manager",
-        img: "hani.jpg",
+        img: "sofienne.jpg",
         // desc: `Rasslen is a skillful and artsy Software engineering student with large knowledge
         //            and understanding of the field of computer science. He’s a funny spirit and a creative mind who always
         //             seeks originality and perfection.`,
