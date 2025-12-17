@@ -27,58 +27,70 @@ export default class Team extends Component {
     const modals = [
       {
         id: 1,
-        name: "Hani Haddad",
+        name: "Akrem Medimagh",
         role: "ChairMan",
-        img: "hani.jpg",
+        img: "akrem.png",
         // desc: `Asma is a IT computer systems & networks engineering student with a great passion for computer science. She thrives on
-        //          challenges and constantly sets goals for herself. She’s a natural leader who’s always looking for an 
+        //          challenges and constantly sets goals for herself. She’s a natural leader who’s always looking for an
         //          opportunity to achieve greatness and bring out the best in people.`,
-        linkedinLink: "https://www.linkedin.com/in/hani-haddad1/",
-        facebookLink: "https://www.facebook.com/julio.hannouna.bogoss/",
+        // linkedinLink: "https://www.linkedin.com/in/hani-haddad1/",
+        // facebookLink: "https://www.facebook.com/julio.hannouna.bogoss/",
       },
       {
         id: 8,
-        name: "Eya Ridene",
+        name: "Rayen Khammar",
         role: "Vice chair membership",
-        img: "eyar.jpg",
+        img: "rayen.png",
         // desc: `Anissa is a talented and energetic IT computer systems & networks engineering student. She’s a people-person who loves
         //           meeting new people and learning about their lives and their backgrounds. She’s an excellent communicator
         //            who will make you feel comfortable and welcomed.`,
-        linkedinLink: "https://www.linkedin.com/in/eya-ridene-b73b86232/",
-        facebookLink: "https://www.facebook.com/eya.riden.1",
+        // linkedinLink: "https://www.linkedin.com/in/eya-ridene-b73b86232/",
+        // facebookLink: "https://www.facebook.com/eya.riden.1",
       },
       {
         id: 7,
-        name: "Naim Dali ",
+        name: "Mohamed Yassine Kallel",
         role: "Vice Chair technical",
-        img: "naim.jpg",
+        img: "yassine_1.jpg",
         // desc: `Salma is a Software engineering student, passionate about web
         //            development, this is why she spends a lot of her time learning in online classes so that she can amplify her
         //             skills. She is so sweet and fun.`,
-        linkedinLink: "https://www.linkedin.com/in/naim-dali-b1ab831a8/",
-        facebookLink: "https://www.facebook.com/naim.dali.54",
+        // linkedinLink: "https://www.linkedin.com/in/naim-dali-b1ab831a8/",
+        // facebookLink: "https://www.facebook.com/naim.dali.54",
       },
       {
         id: 3,
-        name: "Eya Teyeb",
-        role: "General Secretary",
-        img: "eyat.jpg",
+        name: "Omar Trigui",
+        role: "Treasurer",
+        img: "omar.png",
         // desc: `Issam is an ambitious IT computer systems & networks student passionate about a lot of things. His determination and time-management made him the best fit for being the general secretary
         //             of this year.`,
-        linkedinLink: "https://www.linkedin.com/in/eya-teyeb-0408371b7/",
-        facebookLink: "https://www.facebook.com/eyateyeb7",
+        // linkedinLink: "https://www.linkedin.com/in/eya-teyeb-0408371b7/",
+        // facebookLink: "https://www.facebook.com/eyateyeb7",
       },
-     
+
       {
         id: 2,
-        name: "Sofiene azzabi",
+        name: "Zakaria Lahrizi",
         role: "Media Manager",
-        img: "sofienne.jpg",
+        img: "zakaria.png",
         // desc: `Rasslen is a skillful and artsy Software engineering student with large knowledge
         //            and understanding of the field of computer science. He’s a funny spirit and a creative mind who always
         //             seeks originality and perfection.`,
-        linkedinLink: "#",
-        facebookLink: "https://www.facebook.com/sofienne.azzabi",
+        // linkedinLink: "#",
+        // facebookLink: "https://www.facebook.com/sofienne.azzabi",
+      },
+
+      {
+        id: 9,
+        name: "Ons Sassi",
+        role: "General Secretary",
+        img: "ons.png",
+        // desc: `Rasslen is a skillful and artsy Software engineering student with large knowledge
+        //            and understanding of the field of computer science. He’s a funny spirit and a creative mind who always
+        //             seeks originality and perfection.`,
+        // linkedinLink: "#",
+        // facebookLink: "https://www.facebook.com/sofienne.azzabi",
       },
     ];
 
