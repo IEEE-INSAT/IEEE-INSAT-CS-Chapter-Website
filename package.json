@@ -34,8 +34,8 @@
     "typed.js": "^2.0.11"
   },
   "scripts": {
-    "start": "set NODE_OPTIONS=--openssl-legacy-provider&& react-scripts start",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider&& set CI=false&& react-scripts build",
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider CI=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
@@ -57,6 +57,7 @@
     ]
   },
   "devDependencies": {
+    "cross-env": "^10.1.0",
     "gh-pages": "^2.1.1",
     "sass": "^1.58.0"
   }
