@@ -57,6 +57,41 @@ function Timeline() {
 
   const events = [
     {
+      id: 13,
+      name: "IEEEXtreme 19.0",
+      date: "October 2025",
+      image: "xtreme-19.png",
+      description: `IEEEXtreme is a global competitive programming competition organized by IEEE, lasting 24 hours non-stop. Teams take part in a series of preparatory workshops held three weeks in advance, designed to equip them for solving complex algorithmic problems during the competition. The goal of the event is to develop programming and problem-solving skills while providing students with international visibility. Ahead of the competition, a theatrical "murder case" involving the event's mascot, Abdou, was staged as an engaging storyline to build excitement and foster team spirit before the contest began.`,
+    },
+    {
+      id: 12,
+      name: "Summer School 2025",
+      date: "Summer 2025",
+      image: "summer-school.png",
+      description: `Summer School, A series of 15 introductory workshops organized by all Student Branch chapters over the course of a weekend. These sessions are designed to introduce students to a wide range of technical fields, providing them with a solid foundation and helping them explore different domains before choosing a specialization. Special emphasis is placed on the Computer Science workshops for beginners, which focus on fundamental programming concepts, problem-solving basics, and an accessible introduction to computing, making them ideal for students with little or no prior experience.`,
+    },
+    {
+      id: 11,
+      name: "AINS",
+      date: "June 2025",
+      image: "ains.png",
+      description: `AINS (Artificial Intelligence National Summit) is the first national conference dedicated to promoting and democratizing Artificial Intelligence. Held over three days in a hotel, it brings together students, professionals, and technology enthusiasts to explore the latest advances in AI. The program features inspiring talks led by experts, hands-on workshops on applying AI across various sectors, poster sessions showcasing research projects, and a pitching hackathon that gives participants the opportunity to turn innovative ideas into concrete solutions.`,
+    },
+    {
+      id: 10,
+      name: "Orbit",
+      date: "April 2025",
+      image: "orbit.png",
+      description: `Orbit, The first DevOps competition in Tunisia, is a one-month series of workshops focused on DevOps, MLOps, and Cloud technologies, culminating in the Orbit Contest. The Orbit Contest is a 12-hour DevOps and MLOps hackathon organized at INSAT, where teams of up to three participants work together to solve a series of challenges. This event aims to introduce and further develop students' skills in essential DevOps, MLOps, and Cloud practices. For partner companies, it represents a unique opportunity to meet talented individuals capable of effectively applying these technologies.`,
+    },
+    {
+      id: 9,
+      name: "DataQuest",
+      date: "February 2025",
+      image: "data-overflow.png",
+      description: `Data Overflow is a one-month series of workshops in Machine Learning, Artificial Intelligence, and Data Science, culminating in DataQuest. DataQuest is a 20-hour Data Science and AI hackathon organized at INSAT, where teams solve a series of real-world problems by applying the knowledge gained during the workshops. The goal of the event is to strengthen students' practical skills. This hands-on learning experience also provides partner companies with an opportunity to identify talented and highly motivated profiles.`,
+    },
+    {
       id: 6,
       name: "SummerSchool",
       date: "2-4/10/2020",
