@@ -7,6 +7,8 @@ import "aos/dist/aos.css";
 import $ from "jquery";
 import Typed from "typed.js/src/typed";
 import PreviousMemberWeek from "./PreviousMemberWeek";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const MemberOfTheWeek = () => {
   useEffect(() => {
@@ -31,6 +33,30 @@ const MemberOfTheWeek = () => {
   }, []);
 
   const membersOfTheWeek = [
+    {
+      id: 12,
+      fullName: "Ines Mtibaa",
+      gender: "female",
+      image: require("../../assets/img/Member_of_the_week/members/ines-mtibaa.png"),
+      characteristics: [" Motivated", "Committed"],
+      description: `Ines is a member of the media team, participated in CSTAM 2.0 and is now a part of the projects department. She is a great addition to our community, a very hard-working and genuinely friendly person.`,
+    },
+    {
+      id: 11,
+      fullName: "Moetaz Zwari",
+      gender: "male",
+      image: require("../../assets/img/Member_of_the_week/members/moetez-zwari.png"),
+      characteristics: [" Helpful", "Trustworthy", "Highly organized"],
+      description: `Moetaz was our IEEEXtreme 19.0 Logistics Manager showing exceptional organization skills, thanks to him the event went smoothly. He helped, as well, in our Discord & Game nights, making him the discovery of the season. And btw he uses Arch!`,
+    },
+    {
+      id: 10,
+      fullName: "Ghayth Abidli",
+      gender: "male",
+      image: require("../../assets/img/Member_of_the_week/members/ghayth-abidi.png"),
+      characteristics: [" Reliable", "Enthousiastic"],
+      description: `So far, Ghayth is one of our best members this year not only in our CS Chapter but for the whole IEEE INSAT SB Community. Despite being a first year student, he was very involved and most importantly friendly and reliable.`,
+    },
     {
       id: 9,
       fullName: "Mahdi Chaari",
@@ -105,7 +131,8 @@ const MemberOfTheWeek = () => {
     },
   ];
 
-  const prevMembers = membersOfTheWeek.slice(1);
+  const currentMembers = membersOfTheWeek.slice(0, 3);
+  const prevMembers = membersOfTheWeek.slice(3);
 
   return (
     <>
@@ -128,42 +155,60 @@ const MemberOfTheWeek = () => {
           </div>
 
           <div className={classes.currentMember}>
-            <div className="row d-flex justify-content-center">
-              <div className="col-md-4 " data-aos="fade-right">
-                <img
-                  src={membersOfTheWeek[0].image}
-                  className="img-fluid"
-                  alt="Current Member of the week"
-                />
-              </div>
+            <Carousel
+              autoPlay={true}
+              infiniteLoop={true}
+              interval={5000}
+              transitionTime={800}
+              showThumbs={false}
+              showStatus={false}
+            >
+              {currentMembers.map((member) => (
+                <div key={member.id}>
+                  <div
+                    className="row d-flex justify-content-center"
+                    style={{ paddingBottom: "40px" }}
+                  >
+                    <div className="col-md-4">
+                      <img
+                        src={member.image}
+                        className="img-fluid"
+                        alt={`Member ${member.fullName}`}
+                        style={{
+                          width: "100%",
+                          aspectRatio: "1 / 1",
+                          objectFit: "cover",
+                          borderRadius: "8px",
+                        }}
+                      />
+                    </div>
 
-              <div className="col-md-7">
-                <div data-aos="fade-in">
-                  <h1 style={{ color: "#ff6535" }}>
-                    {membersOfTheWeek[0].fullName}
-                  </h1>
-                  <p style={{ color: "#29588c" }}>
-                    {membersOfTheWeek[0].gender === "male" ? "He" : "She"}{" "}
-                    Is&nbsp;
-                    <span
-                      style={{ color: "#29588c" }}
-                      className="typed"
-                      data-typed-items={`, ${membersOfTheWeek[0].characteristics.join(
-                        ", "
-                      )}`}
-                    >
-                      {" "}
-                    </span>
-                  </p>
+                    <div className="col-md-7" style={{ textAlign: "left" }}>
+                      <div>
+                        <h1 style={{ color: "#ff6535" }}>{member.fullName}</h1>
+                        <p style={{ color: "#29588c", fontSize: "1.2rem" }}>
+                          {member.gender === "male" ? "He" : "She"} is{" "}
+                          {member.characteristics.map((char, i) => (
+                            <span key={i}>
+                              {i > 0 && ", "}
+                              <strong>{char}</strong>
+                            </span>
+                          ))}
+                        </p>
+                      </div>
+                      <p style={{ fontSize: "1rem", color: "#333" }}>
+                        {member.description}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <p data-aos="fade-up">{membersOfTheWeek[0].description}</p>
-              </div>
-            </div>
+              ))}
+            </Carousel>
           </div>
         </div>
       </header>
 
-      {membersOfTheWeek.length > 1 && (
+      {prevMembers.length > 0 && (
         <section className={classes.section}>
           <div className={classes.container}>
             <div className="section-header">

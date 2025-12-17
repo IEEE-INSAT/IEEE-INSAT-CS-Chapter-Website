@@ -95,7 +95,7 @@ function Contact() {
             <div className="contact-phone">
               <i className="fas fa-phone" />
               <h3>Phone Number</h3>
-              <p>+216 92 729 167</p>
+              <p>+216 56 030 414</p>
             </div>
           </div>
 
