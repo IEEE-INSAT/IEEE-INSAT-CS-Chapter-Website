@@ -1,6 +1,8 @@
-# IEEE INSAT Computer Society — showcase site
+# IEEE INSAT Computer Society — chapter website
 
-Redesign of cs-insat.ieee.tn following the 26/27 graphic charter. Three pages:
+The website of the IEEE INSAT Computer Society Student Branch Chapter, live at
+**[cs-insat.ieee.tn](https://cs-insat.ieee.tn)**. It follows the 26/27 graphic charter
+and is a static site built with [Vite](https://vite.dev) and three.js. Three pages:
 
 - `index.html` — the scrolling home page. DREAMZ, the chapter's 3D bot (its X3D model), follows the
   scroll, re-poses for each chapter and breaks into voxel cubes between chapters.
@@ -11,10 +13,24 @@ Every page has **Ask Dreamz**, a small chatbot in the corner.
 
 ## Run
 
+Needs Node.js 20.19+ or 22.12+ (Vite 8's minimum).
+
     npm install
-    npm run dev        # http://localhost:5173
+    npm run dev        # http://localhost:5173, reloads on save
     npm run build      # static site in dist/
     npm run preview    # serve the build
+
+There is no `npm start`: use `npm run dev`.
+
+## Deploy
+
+Every push to `main` deploys the site. The GitHub Actions workflow
+(`.github/workflows/main.yml`) runs `npm install` and `npm run build`, then uploads
+`dist/` over FTP to `/cs-insat.ieee.tn/` on the chapter's host. The FTP login is
+stored in the repository secrets `ftp_username` and `ftp_password`.
+
+So check your change with `npm run build` and `npm run preview` before you push, or
+work on a branch and merge it into `main` when it is ready.
 
 ## Pages
 
@@ -54,8 +70,11 @@ topic there to teach it something new.
 - `npm run images:local -- "C:/path/to/CS WEBSITE"` builds the board portraits, the
   event gallery photos and the facts collage from the folder the chapter provided
   (handles the raw `.CR2` portraits by extracting their full-size preview).
-- `npm run images:remote` pulls the older photos (activities, archive events,
-  sponsors) from the current live site.
+- `npm run images:remote` pulled the older photos (activities, archive events,
+  sponsors) from the previous version of the live site. That site has been replaced,
+  so its image URLs no longer exist and this script can't download them any more. The photos
+  it produced are already in `public/img/`; keep them in the repo. The previous
+  site's source is in this repository's git history, before commit `e01840c`.
 - `node scripts/fetch-logos.mjs` downloads official partner logos (Wikimedia Commons or
   the company's own site), keeps the untouched originals in `assets/logos/` and writes
   trimmed web versions to `public/img/sponsors/`. Logos it doesn't list are still crops

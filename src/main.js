@@ -64,7 +64,7 @@ ${navHTML("home")}
   <section class="pillar" id="vision" data-pose="vision">
     <div class="wrap side left">
       <div class="panel">
-        ${head("04", "Our vision", "Reinvent how people exchange knowledge")}
+        ${head("04", "Our vision", "Where students meet the real world")}
         <p class="body reveal">${C.pillars.vision}</p>
       </div>
     </div>
