@@ -1,71 +1,94 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# IEEE INSAT Computer Society — showcase site
 
-## Available Scripts
+Redesign of cs-insat.ieee.tn following the 26/27 graphic charter. Three pages:
 
-In the project directory, you can run:
+- `index.html` — the scrolling home page. DREAMZ, the chapter's 3D bot (its X3D model), follows the
+  scroll, re-poses for each chapter and breaks into voxel cubes between chapters.
+- `events.html` — the events hub (the Time Portal's events page, without challenges).
+- `activities.html` — every session and workshop, by year.
 
-### `npm start`
+Every page has **Ask Dreamz**, a small chatbot in the corner.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Run
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+    npm install
+    npm run dev        # http://localhost:5173
+    npm run build      # static site in dist/
+    npm run preview    # serve the build
 
-### `npm test`
+## Pages
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Home:** Hero · About · Mission · S.M.A.R.T plan · Vision · Facts (+ photo collage) ·
+Events teaser (links to the events page) · Team (26/27 board) · Sponsors · Contact.
 
-### `npm run build`
+**Events:** IEEEXtreme, Data Overflow, BioIT, AINS in the Time Portal layout: a row
+of icon tiles, the event's artwork behind the page, kicker / title / tagline / chips,
+then the About and detail cards, plus a photo gallery and the older events below.
+Pick an event by clicking, hovering or with the arrow keys; links like
+`/events.html?event=ains` open one directly.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Ask Dreamz:** a local FAQ bot (no server, no AI model). It matches questions in
+English or French against the topics in `src/chat.js` (events, IEEEXtreme history,
+workshops, joining, team, contact, sponsors) and answers from `content.js`. Add a
+topic there to teach it something new.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Where things are
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| What | Where |
+| --- | --- |
+| All text, events, activities, team, sponsors | `src/content.js` |
+| Colours, type, layout | `src/style.css` (tokens at the top) |
+| 3D scene, scroll poses, dithered background, voxel burst | `src/scene.js` (`POSES` table at the top) |
+| Home page | `src/main.js` |
+| Events page / its artwork / its styles | `src/events.js`, `src/event-art.js`, `src/events.css` |
+| Activities page | `src/activities.js` |
+| Nav, footer, shared helpers | `src/chrome.js` |
+| Ask Dreamz chatbot | `src/chat.js` |
+| Pixel icons on the event tiles | `src/glyphs.js` |
+| Charter fonts (PP Mondwest, PP NeueBit) | `src/fonts/` |
+| Photos (WebP) | `public/img/` |
+| 3D model (X3D from Blender), its loader and colours | `public/models/dreamz.x3d`, `src/x3d-loader.js`, `src/dreamz-colors.js` |
 
-### `npm run eject`
+## Photos
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- `npm run images:local -- "C:/path/to/CS WEBSITE"` builds the board portraits, the
+  event gallery photos and the facts collage from the folder the chapter provided
+  (handles the raw `.CR2` portraits by extracting their full-size preview).
+- `npm run images:remote` pulls the older photos (activities, archive events,
+  sponsors) from the current live site.
+- `node scripts/fetch-logos.mjs` downloads official partner logos (Wikimedia Commons or
+  the company's own site), keeps the untouched originals in `assets/logos/` and writes
+  trimmed web versions to `public/img/sponsors/`. Logos it doesn't list are still crops
+  of the partners image the chapter shared.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+All three skip files that already exist: delete a file to regenerate it.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Charter mapping
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Palette: `#190D1B` ink, `#DAFF77` lime, `#6865F2` violet, `#86B1EA` sky, `#FF8849` orange, `#F1FFC8` cream.
+  Each flagship event additionally keeps its own two brand colours (in `content.js`).
+- Type: Zalando Sans / Zalando Sans Expanded, PP Mondwest (display), PP NeueBit (labels).
+  The PP fonts are Pangram Pangram fonts: check the chapter's licence covers web use
+  before publishing.
+- Motifs: Bayer dithering (background shader, event photos), grids, bounding boxes
+  with corner handles, pixel disintegration (section edges, the mascot's voxel burst),
+  difference blending.
 
-## Learn More
+## The 3D model
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+DREAMZ is the chapter's X3D model, loaded as-is: `public/models/dreamz.x3d` is the
+file exported from Blender, and `src/x3d-loader.js` builds it in three.js with the
+same parts, transforms, material values (grey diffuse, specular, shininess) and
+faceted shading, plus the file's own point light. Blender's X3D export leaves every
+material grey, so `src/dreamz-colors.js` paints each part (by its object name in the
+file) in the mascot sheet's colours: blue head and ears, violet screen, lime face,
+blue shield with a lime inside, cream ear insides, orange bolt and rings. To update the mascot, replace
+`dreamz.x3d` with a new export; keep the object names or update that colour table.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Notes
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-### WEBSITE
-https://cs-website-project.vercel.app/#/
+- The contact form opens the visitor's email app with the message filled in. It has
+  no backend; wire it to a mail service if you want in-page sending.
+- Motion respects `prefers-reduced-motion` (no voxel burst, no parallax); without
+  WebGL a static gradient is shown.
+- In development, `window.__stage.snap()` jumps the 3D animation to its resting state.
