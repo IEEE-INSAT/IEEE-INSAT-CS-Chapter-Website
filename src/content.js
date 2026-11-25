@@ -20,9 +20,25 @@ export const about = [
 export const pillars = {
   mission:
     "Our mission is to show the world how powerful and igniting computer science can be through the work of a talented, driven community. We open the door to the latest technologies with workshops, conferences and competitions led by researchers and industry experts, so every member leaves more skilled, more confident and ready to make an impact.",
-  smart: ["Solve", "Motivate", "Aspire", "Renovate", "Think"],
   vision:
     "We dream of a place where students don't wait for graduation to meet the real world. A place where computer science comes to life in health, energy, finance, industry and beyond. Our vision is to create that environment of applied computer science, sharing it across every domain, and opening doors for our members to connect, collaborate, and grow with real companies working on real challenges and projects. Because the true power of computer science isn't what it is, but everything it touches.",
+};
+
+// "The game plan" (section 03): a character builder. Each item stands for something the
+// chapter gives its members; `from` says which activity earns it. `slot` must be one of
+// head, hands, chest, feet, back; `door` marks the cursed item that can only be thrown out.
+export const game = {
+  title: "Build your character.",
+  classes: ["Newcomer", "Apprentice", "Explorer", "Builder", "Challenger", "Future engineer"],
+  items: [
+    { id: "curiosity", slot: "head", name: "Helm of Curiosity", word: "Curiosity", color: "lime", flavor: "Asks why. Then asks how.", from: "your first workshop" },
+    { id: "craft", slot: "hands", name: "Builder's Gloves", word: "Craft", color: "sky", flavor: "+10 to shipping real things.", from: "hands-on trainings" },
+    { id: "teamwork", slot: "chest", name: "Co-op Armor", word: "Teamwork", color: "orange", flavor: "Damage shared is damage halved.", from: "team projects" },
+    { id: "grit", slot: "feet", name: "24h Boots", word: "Grit", color: "violet", flavor: "Stamina for one very long night.", from: "IEEEXtreme" },
+    { id: "network", slot: "back", name: "Network Cape", word: "Connections", color: "cream", flavor: "You fly further with others.", from: "industry visits" },
+    { id: "fear", slot: "door", name: "Fear of Failing", word: "Cursed", color: "grey", flavor: "Heavy and useless.", from: "everyone starts with one" },
+  ],
+  done: "Character complete. Ready for the real world. Join the chapter to play for real.",
 };
 
 export const facts = {

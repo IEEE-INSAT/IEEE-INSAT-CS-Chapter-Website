@@ -34,7 +34,7 @@ work on a branch and merge it into `main` when it is ready.
 
 ## Pages
 
-**Home:** Hero · About · Mission · S.M.A.R.T plan · Vision · Facts (+ photo collage) ·
+**Home:** Hero · About · Mission · The game plan (character builder) · Vision · Facts (+ photo collage) ·
 Events teaser (links to the events page) · Team (26/27 board) · Sponsors · Contact.
 
 **Events:** IEEEXtreme, Data Overflow, BioIT, AINS in the Time Portal layout: a row
@@ -56,6 +56,7 @@ topic there to teach it something new.
 | Colours, type, layout | `src/style.css` (tokens at the top) |
 | 3D scene, scroll poses, dithered background, voxel burst | `src/scene.js` (`POSES` table at the top) |
 | Home page | `src/main.js` |
+| The game plan: build-your-character section (items, slots, levels) | `src/builder.js`, item text in `src/content.js` (`game`) |
 | Events page / its artwork / its styles | `src/events.js`, `src/event-art.js`, `src/events.css` |
 | Activities page | `src/activities.js` |
 | Nav, footer, shared helpers | `src/chrome.js` |

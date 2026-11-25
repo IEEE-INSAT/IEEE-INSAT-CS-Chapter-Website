@@ -8,6 +8,7 @@ import * as C from "./content.js";
 import { glyphSvg } from "./glyphs.js";
 import { navHTML, footerHTML, initChrome, head, img, dis, corners, reducedMotion } from "./chrome.js";
 import { mountChat } from "./chat.js";
+import { builderHTML, initBuilder } from "./builder.js";
 
 const EV = C.hubEvents;
 
@@ -50,22 +51,20 @@ ${navHTML("home")}
     </div>
   </section>
 
-  <section class="pillar" id="plan" data-pose="plan">
+  <section class="pillar" id="vision" data-pose="vision">
     <div class="wrap side right">
       <div class="panel">
-        ${head("03", "Our plan", "Our plan is S.M.A.R.T")}
-        <ol class="smart">
-          ${C.pillars.smart.map((w, i) => `<li class="reveal" style="--d:${i}"><b aria-hidden="true">${w[0]}</b><span>${w}</span></li>`).join("")}
-        </ol>
+        ${head("03", "Our vision", "Where students meet the real world")}
+        <p class="body reveal">${C.pillars.vision}</p>
       </div>
     </div>
   </section>
 
-  <section class="pillar" id="vision" data-pose="vision">
+  <section class="pillar" id="plan" data-pose="plan">
     <div class="wrap side left">
       <div class="panel">
-        ${head("04", "Our vision", "Where students meet the real world")}
-        <p class="body reveal">${C.pillars.vision}</p>
+        ${head("04", "The game plan", C.game.title)}
+        ${builderHTML(C.game)}
       </div>
     </div>
   </section>
@@ -189,6 +188,7 @@ ${footerHTML("home")}`;
 const root = document.documentElement;
 initChrome("home");
 mountChat();
+initBuilder(C.game);
 
 /* ---------- partner logos: pass each logo's real aspect ratio to CSS so they get equal visual weight ---------- */
 document.querySelectorAll(".sponsor-grid img").forEach((im) => {
