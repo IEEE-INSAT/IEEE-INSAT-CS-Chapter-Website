@@ -192,9 +192,13 @@ const ANIM = {
     };
   },
 
-  /** AINS: every few seconds a new full path through the network lights up, layer by layer. */
+  /** AINS: one calm signal at a time. A path lights up layer by layer from input to
+   *  output, then fades out from the input side, and after a short pause the next one
+   *  starts. The path lit in the static art starts fading on the first frame, so the
+   *  artwork moves as soon as the event is opened. */
   ains(svg, ev) {
-    const a = ev.theme.accent, b = ev.theme.accent2, counts = [4, 6, 8, 6, 3], STEP = 0.11, HOLD = 1.6;
+    const a = ev.theme.accent, b = ev.theme.accent2, counts = [4, 6, 8, 6, 3];
+    const STEP = 0.14, TRAIL = 8, PAUSE = 1.1, FIRST = 0.7;
     const node = (l, j) => svg.querySelector(`rect[data-l="${l}"][data-j="${j}"]`);
     const edge = (l, j, k) => svg.querySelector(`line[data-l="${l}"][data-j="${j}"][data-k="${k}"]`);
     const setNode = (el, on) => {
@@ -205,28 +209,27 @@ const ANIM = {
     const setEdge = (el, on) => {
       el.setAttribute("stroke", on ? b : a); el.setAttribute("stroke-opacity", on ? 0.95 : el.dataset.o); el.setAttribute("stroke-width", on ? 5 : 2);
     };
-    const pick = (prev) => {
-      let p;
-      // stay in the middle of each layer: never the top or bottom nodes
-      do p = counts.map((c) => { const lo = Math.max(1, Math.floor(c / 4)); return lo + Math.floor(Math.random() * (c - 2 * lo)); }); while (prev && p.every((v, i) => v === prev[i]));
-      return p;
-    };
-    // the static art starts with this path lit
-    let path = [1, 3, 5, 2, 1], since = 0, lit = 2 * counts.length - 1;
+    const set = (el, on) => (el.tagName === "rect" ? setNode(el, on) : setEdge(el, on));
+    // stay in the middle of each layer: never the top or bottom nodes
+    const pick = () => counts.map((c) => { const lo = Math.max(1, Math.floor(c / 4)); return lo + Math.floor(Math.random() * (c - 2 * lo)); });
     const parts = (p) => p.flatMap((j, l) => (l < p.length - 1 ? [node(l, j), edge(l, j, p[l + 1])] : [node(l, j)]));
-    let shown = parts(path);
+
+    // the static art starts with [1, 3, 5, 2, 1] lit: carry it on as a signal already in flight
+    let lit = new Set(parts([1, 3, 5, 2, 1]));
+    let pulses = [{ parts: [...lit], head: lit.size - 1 }], spawn = FIRST;
     return (t, dt) => {
-      since += dt;
-      if (since > HOLD + lit * STEP) {
-        shown.forEach((el, i) => (i % 2 ? setEdge(el, false) : setNode(el, false)));
-        path = pick(path); shown = parts(path); since = 0; lit = 0;
-      }
-      // light the new path one step at a time, from the input layer to the output
-      while (lit < shown.length && since >= lit * STEP) {
-        const el = shown[lit];
-        lit % 2 ? setEdge(el, true) : setNode(el, true);
-        lit++;
-      }
+      spawn -= dt;
+      if (spawn <= 0) { const p = parts(pick()); pulses.push({ parts: p, head: 0 }); spawn = (p.length + TRAIL) * STEP + PAUSE; }
+      const want = new Set();
+      pulses = pulses.filter((p) => {
+        p.head += dt / STEP;
+        const h = Math.floor(p.head);
+        for (let i = Math.max(0, h - TRAIL); i <= Math.min(h, p.parts.length - 1); i++) want.add(p.parts[i]);
+        return h - TRAIL < p.parts.length;
+      });
+      lit.forEach((el) => { if (!want.has(el)) set(el, false); });
+      want.forEach((el) => { if (!lit.has(el)) set(el, true); });
+      lit = want;
     };
   },
 };
