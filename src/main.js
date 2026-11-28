@@ -9,6 +9,7 @@ import { glyphSvg } from "./glyphs.js";
 import { navHTML, footerHTML, initChrome, head, img, dis, corners, reducedMotion } from "./chrome.js";
 import { mountChat } from "./chat.js";
 import { builderHTML, initBuilder } from "./builder.js";
+import { contactHTML, initContacts } from "./contacts.js";
 
 const EV = C.hubEvents;
 
@@ -146,6 +147,7 @@ ${navHTML("home")}
             <figure class="bbox">${img("team/" + t.img, `Portrait of ${t.name}`, 640, 800)}${corners}</figure>
             <p class="role">${t.role}</p>
             <h3>${t.name}</h3>
+            ${contactHTML(t)}
           </li>`).join("")}
       </ul>
     </div>
@@ -189,6 +191,7 @@ const root = document.documentElement;
 initChrome("home");
 mountChat();
 initBuilder(C.game);
+initContacts();
 
 /* ---------- partner logos: pass each logo's real aspect ratio to CSS so they get equal visual weight ---------- */
 document.querySelectorAll(".sponsor-grid img").forEach((im) => {

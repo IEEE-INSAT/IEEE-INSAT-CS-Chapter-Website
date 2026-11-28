@@ -130,6 +130,7 @@ export const archiveEvents = [
 // photos = number of images in public/img/activities/<slug>-N.webp
 export const activities = [
   // 2026 and late 2025: from the chapter's Facebook page
+  { slug: "cstam3", photos: 5, year: 2026, date: "14–15 Nov 2026", title: "CSTAM 3.0 in Hammamet", text: "CSTAM 3.0, the IEEE Computer Society Tunisian Annual Meeting organized by the IEEE CS ENET'Com Student Branch Chapter, brought 600+ students, researchers and industry leaders to the Méhari Hotel in Hammamet for two days of keynotes, hands-on workshops, competitions and networking. Our members came home with a strong set of results: 1st place in the Ninety eGaming challenge, 2nd and 3rd place in CS Arena, a multidisciplinary competition spanning IoT, agentic AI, cloud, data science, cybersecurity and competitive programming, and the Market Pioneer award in the Project Holder track for our Smart Mirror. Our teams also pitched among the top 3 in the HealthTech and Cloud & Infrastructure tracks of the CSTAM Book challenges." },
   { slug: "xtreme20", photos: 3, year: 2026, date: "31 Oct 2026", title: "IEEEXtreme 20.0", text: "Under the theme of a journey beyond the known, IEEEXtreme 20.0 brought INSAT participants together for an unforgettable 24-hour programming challenge. Teams pushed their problem-solving abilities to the limit, tackling algorithmic challenges throughout the night while relying on teamwork, persistence, and strategic thinking. Behind the competition was a collective effort involving our partners DELL Technologies, Everience Tunisia, Yab, MAD Chips, and Hkeyet Events, alongside ACM INSAT, with whom we organized the training workshops. Together, we created an environment where participants could challenge themselves, learn from one another, and experience the spirit of competitive programming on a global stage." },
   { slug: "cparena", photos: 3, year: 2026, date: "Oct 2026", title: "CP Arena", text: "Before taking on the 24-hour IEEEXtreme challenge, participants had the opportunity to step into the world of Competitive Programming through CP Arena. Designed as an accessible starting point, the session introduced teams to the logic and problem-solving mindset behind programming contests. Through practical challenges and hands-on exploration, participants strengthened their reasoning, discovered how to approach unfamiliar problems, and experienced the excitement of solving problems against the clock. It was the first step toward a bigger challenge." },
   { slug: "cpstrat", photos: 1, year: 2026, date: "14 Oct 2026", title: "CP Strategies & Time Complexity (with ACM INSAT)", text: "Building on the foundations of competitive programming, this second workshop organized with ACM INSAT took participants deeper into the art of designing efficient solutions. Led by Wassim Fkih and Mohamed Nadhir Djebbi, the session explored problem-solving strategies and time complexity analysis, helping participants understand not only how to solve a problem, but how to evaluate and optimize their approach. It encouraged a shift from simply finding an answer to finding a solution that is efficient, scalable, and competitive." },
@@ -164,13 +165,15 @@ export const activities = [
   { slug: "ss-flutter", photos: 3, year: 2021, date: "10–11 Sep 2021", title: "Summer School Flutter", text: "From discovering a framework to building a working mobile application, this Flutter workshop gave participants a practical introduction to app development. After exploring the core concepts of Flutter, the trainers guided participants through creating application pages, connecting interfaces, styling buttons and text, and implementing the logic behind interactive features. By the end of the workshop, everyone had built a working application of their own, turning theoretical concepts into a tangible result and experiencing the process of bringing a mobile app to life." },
 ];
 
+// The 26/27 board. linkedin: full profile URL; email: the address to show publicly.
+// Leave either empty ("") to hide that link; with both empty the card shows no contact tiles.
 export const team = [
-  { img: "marwen", name: "Marwen Agrebi", role: "Chair" },
-  { img: "kmar", name: "Kmar Ben Ayed", role: "Vice Chair Technical Activities" },
-  { img: "achref", name: "Achref Antar", role: "Vice Chair Membership Activities" },
-  { img: "ghayth", name: "Ghayth Abidli", role: "Treasurer" },
-  { img: "roudaina", name: "Roudaina Linoubli", role: "General Secretary" },
-  { img: "ines", name: "Ines Fakhfakh", role: "Media Manager" },
+  { img: "marwen", name: "Marwen Agrebi", role: "Chair", linkedin: "https://www.linkedin.com/in/marwen-agrebi-207524417/", email: "agrebimarwen771@gmail.com" },
+  { img: "kmar", name: "Kmar Ben Ayed", role: "Vice Chair Technical Activities", linkedin: "https://www.linkedin.com/in/kmar-b-b2026621a/", email: "kmarbenayed701@gmail.com" },
+  { img: "achref", name: "Achref Antar", role: "Vice Chair Membership Activities", linkedin: "https://www.linkedin.com/in/achref-anter-136b0b351/", email: "anterachref3@gmail.com" },
+  { img: "ghayth", name: "Ghayth Abidli", role: "Treasurer", linkedin: "https://www.linkedin.com/in/ghayth-abidli-a28970389/", email: "ghaythff0@gmail.com" },
+  { img: "roudaina", name: "Roudaina Linoubli", role: "General Secretary", linkedin: "https://www.linkedin.com/in/roudaina-linoubli-836b19449/", email: "inoubliroudi@gmail.com" },
+  { img: "ines", name: "Ines Fakhfakh", role: "Media Manager", linkedin: "https://www.linkedin.com/in/ines-fakhfakh-28b46033b/", email: "ines.fakhfakh@insat.ucar.tn" },
 ];
 
 // dark: true = white logo, shown on an ink tile

@@ -43,10 +43,12 @@ then the About and detail cards, plus a photo gallery and the older events below
 Pick an event by clicking, hovering or with the arrow keys; links like
 `/events.html?event=ains` open one directly.
 
-**Ask Dreamz:** a local FAQ bot (no server, no AI model). It matches questions in
-English or French against the topics in `src/chat.js` (events, IEEEXtreme history,
-workshops, joining, team, contact, sponsors) and answers from `content.js`. Add a
-topic there to teach it something new.
+**Ask Dreamz:** a local FAQ bot (no server, no AI model) in `src/chat.js`. Every answer
+is built from `content.js`, so editing the site's content updates the bot too. It
+answers, in order: a board member's name or role (with their LinkedIn and email), a
+partner's name, a named activity or event, a topic matched by English or French
+keywords (one-letter typos forgiven), and finally a search through every text on the
+site that quotes the best passage. Add a topic to `TOPICS` to teach it something new.
 
 ## Where things are
 

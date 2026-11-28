@@ -237,7 +237,7 @@ h1 { font: 400 clamp(3.4rem, 10.2vw, 9.2rem)/0.86 var(--f-display); letter-spaci
 .act[open] .act-date { color: var(--ink); }
 @media (hover: hover) { .act:not([open]) summary:hover { background: rgba(241, 255, 200, 0.08); padding-inline: 14px; } }
 .act-body { padding: 22px 4px 30px; display: grid; gap: 22px; }
-.act-body p { max-width: 70ch; }
+.act-body p { max-width: none; text-wrap: pretty; }
 .act-photos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
 .act-photos img { aspect-ratio: 3 / 2; object-fit: cover; width: 100%; border: 1px solid var(--line); }
 @media (max-width: 859px) {
@@ -263,6 +263,24 @@ h1 { font: 400 clamp(3.4rem, 10.2vw, 9.2rem)/0.86 var(--f-display); letter-spaci
   .member:hover .bbox i { background: var(--lime); transform: scale(1.35); }
 }
 @media (hover: none) { .member .bbox img { filter: none; } }
+
+/* team contacts: LinkedIn and email tiles (src/contacts.js) */
+.ct-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 16px; }
+.ct-links.one { grid-template-columns: minmax(0, 1fr); }
+.ct-link { --c: var(--sky); display: flex; align-items: center; gap: 10px; min-width: 0; height: 58px; padding: 0 10px 4px 8px; background: var(--c); color: var(--ink); text-decoration: none; box-shadow: inset 0 -4px 0 rgba(25, 13, 27, 0.28); transition: transform 0.15s var(--ease), box-shadow 0.15s var(--ease), background-color 0.15s; }
+.ct-mail { --c: var(--orange); }
+.ct-link:hover, .ct-link.copied { background: var(--cream); }
+.ct-link:active { transform: translateY(3px); box-shadow: inset 0 -1px 0 rgba(25, 13, 27, 0.28); }
+.ct-ic { flex: none; display: grid; place-items: center; width: 34px; height: 34px; background: var(--ink); }
+.ct-ico { width: 18px; height: 18px; fill: var(--c); shape-rendering: crispEdges; }
+.ct-tx { display: grid; gap: 3px; min-width: 0; }
+.ct-k { font: 400 1.45rem/0.8 var(--f-bit); letter-spacing: 0.04em; text-transform: uppercase; }
+.ct-s { font: 700 0.68rem/1 var(--f-head); letter-spacing: 0.02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 859px) {
+  .ct-links { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .ct-link { height: 52px; }
+  .ct-k { font-size: 1.3rem; }
+}
 @media (max-width: 859px) { .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .member { padding: 8px 8px 14px; } .member h3 { font-size: 1rem; } }
 
 /* ---------- sponsors ---------- */
